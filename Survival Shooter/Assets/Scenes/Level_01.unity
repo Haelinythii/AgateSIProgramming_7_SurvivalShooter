@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 939410555}
   - component: {fileID: 939410557}
   - component: {fileID: 939410556}
+  - component: {fileID: 939410558}
   m_Layer: 0
   m_Name: Enemy Manager
   m_TagString: Untagged
@@ -639,10 +640,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1835706764}
-  enemy: {fileID: 1519002762, guid: acbbfa1696ad6364b9c57886b056730c, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 292575020}
+  factory: {fileID: 939410558}
 --- !u!114 &939410556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,17 +651,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939410553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1835706764}
-  enemy: {fileID: 1375839409, guid: f1ec56c934d57c142960c0b212bcf779, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1581290289}
+  factory: {fileID: 0}
 --- !u!114 &939410557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939410553}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1835706764}
+  spawnTime: 3
+  spawnPoints:
+  - {fileID: 1714852280}
+  factory: {fileID: 0}
+--- !u!114 &939410558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,14 +687,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 939410553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
+  m_Script: {fileID: 11500000, guid: 7249c41b643d84c40afc200e2ed77899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1835706764}
-  enemy: {fileID: 1221946359, guid: 1218f766e75eadd4e988c8fd91e12461, type: 3}
-  spawnTime: 3
-  spawnPoints:
-  - {fileID: 1714852280}
+  enemyPrefabs:
+  - {fileID: 1375839409, guid: f1ec56c934d57c142960c0b212bcf779, type: 3}
+  - {fileID: 1221946359, guid: 1218f766e75eadd4e988c8fd91e12461, type: 3}
+  - {fileID: 1519002762, guid: acbbfa1696ad6364b9c57886b056730c, type: 3}
 --- !u!1 &1021142967
 GameObject:
   m_ObjectHideFlags: 0
