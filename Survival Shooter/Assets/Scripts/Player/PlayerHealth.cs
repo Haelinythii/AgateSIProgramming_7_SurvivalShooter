@@ -64,6 +64,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void HealHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
+        healthSlider.value = currentHealth;
+    }
 
     void Death()
     {
