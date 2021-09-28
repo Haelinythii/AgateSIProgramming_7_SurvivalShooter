@@ -24,18 +24,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //mendapatkan input horizontal dari player
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        ////mendapatkan input horizontal dari player
+        //float horizontal = Input.GetAxisRaw("Horizontal");
 
-        //mendapatkan input vertical dari player
-        float vertical = Input.GetAxisRaw("Vertical");
+        ////mendapatkan input vertical dari player
+        //float vertical = Input.GetAxisRaw("Vertical");
 
-        Move(horizontal, vertical);
+        //Move(horizontal, vertical);
         Turning();
-        Animating(horizontal, vertical);
+        //Animating(horizontal, vertical);
     }
 
-    private void Move(float horizontal, float vertical)
+    public void Move(float horizontal, float vertical)
     {
         //set arah x dan z variable movement
         movement.Set(horizontal, 0f, vertical);
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Animating(float horizontal, float vertical)
+    public void Animating(float horizontal, float vertical)
     {
         //tentukan jika ada input dari player
         bool isWalking = horizontal != 0 || vertical != 0;

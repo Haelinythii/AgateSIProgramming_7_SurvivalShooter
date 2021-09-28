@@ -7,14 +7,14 @@ public class PlayerShooting : MonoBehaviour
     public float range = 100f;                      
 
     float timer;                                    
-    Ray shootRay;                                   
+    Ray shootRay = new Ray();                                   
     RaycastHit shootHit;                            
     int shootableMask;                             
     ParticleSystem gunParticles;                    
     LineRenderer gunLine;                           
     AudioSource gunAudio;                           
     Light gunLight;                                 
-    float effectsDisplayTime = 0.2f;                
+    float effectsDisplayTime = 0.2f;          
 
     void Awake()
     {
@@ -46,7 +46,7 @@ public class PlayerShooting : MonoBehaviour
         gunLight.enabled = false;
     }
 
-    void Shoot()
+    public void Shoot()
     {
         timer = 0f;
 
@@ -60,6 +60,7 @@ public class PlayerShooting : MonoBehaviour
         gunLine.enabled = true;
         gunLine.SetPosition(0, transform.position);
 
+        shootRay = new Ray();
         shootRay.origin = transform.position;
         shootRay.direction = transform.forward;
 

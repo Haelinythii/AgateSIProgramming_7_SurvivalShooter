@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
@@ -8,8 +9,9 @@ public class GameOverManager : MonoBehaviour
 
 
     Animator anim;                          
-    float restartTimer;                    
+    float restartTimer;
 
+    public Text warningText;
 
     void Awake()
     {
@@ -30,5 +32,11 @@ public class GameOverManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+    }
+
+    public void ShowWarning(float enemyDistance)
+    {
+        warningText.text = string.Format("! {0} m", Mathf.RoundToInt(enemyDistance));
+        anim.SetTrigger("Warning");
     }
 }

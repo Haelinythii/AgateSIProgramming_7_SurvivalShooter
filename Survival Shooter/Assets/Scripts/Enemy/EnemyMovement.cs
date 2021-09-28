@@ -16,21 +16,21 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         //dapatkan reference
-        //playerHealth = player.GetComponent<PlayerHealth>();
-        //enemyHealth = GetComponent<EnemyHealth>();
+        playerHealth = player.GetComponent<PlayerHealth>();
+        enemyHealth = GetComponent<EnemyHealth>();
         agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
-        //if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-        //{
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        {
             agent.SetDestination(player.position);
-        //}
-        //else
-        //{
-        //    agent.enabled = false;
-        //}
+        }
+        else
+        {
+            agent.enabled = false;
+        }
     }
 
 }

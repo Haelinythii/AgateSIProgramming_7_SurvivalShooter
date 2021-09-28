@@ -18,9 +18,9 @@ GameObject:
   - component: {fileID: 9076549003622150628}
   - component: {fileID: 9000005688331656667}
   - component: {fileID: 266164143064647331}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ZomBear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
