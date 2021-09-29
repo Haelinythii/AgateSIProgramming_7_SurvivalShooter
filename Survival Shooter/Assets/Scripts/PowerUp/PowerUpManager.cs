@@ -45,7 +45,6 @@ public class PowerUpManager : MonoBehaviour
 
     private void SpawnPowerUp()
     {
-        Debug.Log("spawn");
         int spawnPowerUp = Random.Range(0, powerUps.Count);
         GameObject powerUpGO = Factory.FactoryMethod(spawnPowerUp);
         powerUpGO.transform.position = spawnPoint.position;

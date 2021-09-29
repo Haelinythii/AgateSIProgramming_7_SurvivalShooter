@@ -21,7 +21,6 @@ public class SpeedUp : PowerUp
 
     public override void Execute()
     {
-        Debug.Log("Speedup");
         playerMovement.speed *= modifier;
     }
 }
