@@ -20,9 +20,6 @@ public class PlayerMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         //mendapatkan nilai mask dari layer Floor
         floorLayerMask = LayerMask.GetMask("Floor");
-
-        PowerUp speedUp = new SpeedUp(this, 1.5f, 5f);
-        StartCoroutine(speedUp.StartCountDuration());
     }
 
     private void FixedUpdate()
