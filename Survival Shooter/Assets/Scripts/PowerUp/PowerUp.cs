@@ -8,13 +8,14 @@ public abstract class PowerUp
     protected float duration;
     protected float modifier;
 
-    public IEnumerator StartCountDuration()
+    public IEnumerator StartCountDuration() //start eksekusi power up, kemudian tunggu selama durasi dan kemudian lepas powerupnya.
     {
         Execute();
         yield return new WaitForSeconds(duration);
         DeExecute();
     }
 
+    //dapatkan durasi powerupnya
     public float GetDuration()
     {
         return duration;

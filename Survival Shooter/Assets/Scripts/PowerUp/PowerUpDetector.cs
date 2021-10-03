@@ -8,8 +8,10 @@ public class PowerUpDetector : MonoBehaviour
     private System.Action OnCollected;
     private void OnTriggerEnter(Collider other)
     {
+        //deteksi jika yang menyentuh adalah player
         if(other.tag == "Player" && !other.isTrigger)
         {
+            //eksekusi powerup yang diambil serta destroy gameobject
             OnCollected?.Invoke();
             Destroy(gameObject);
         }

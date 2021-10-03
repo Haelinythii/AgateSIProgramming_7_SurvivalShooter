@@ -21,6 +21,7 @@ public class Heal : PowerUp
 
     public override void Execute()
     {
+        //heal player di player health
         Debug.Log("heal");
         playerHealth.HealHealth((int)modifier);
     }

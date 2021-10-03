@@ -14,12 +14,12 @@ public class SpeedUp : PowerUp
         playerMovement = _playerMovement;
     }
 
-    public override void DeExecute()
+    public override void DeExecute() //matikan speed up dengan membagi speed yang sudah dikali
     {
         playerMovement.speed /= modifier;
     }
 
-    public override void Execute()
+    public override void Execute() //kali speed dengan modifier agar mempercepat speed player
     {
         playerMovement.speed *= modifier;
     }
